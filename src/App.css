@@ -1,0 +1,13 @@
+.input-div, .display-div {
+    width: 45%;
+    -webkit-box-shadow: 10px 9px 67px 16px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 10px 9px 67px 16px rgba(0, 0, 0, 0.479);
+    box-shadow: 10px 9px 67px 16px rgba(0, 0, 0, 0.548);
+    padding: 2.5%;
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}

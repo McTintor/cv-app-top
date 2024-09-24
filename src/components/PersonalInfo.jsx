@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 
-export default function PersonalInfo({ initialUserInput, onInputChange }) {
-  const [userInput, setUserInput] = useState(initialUserInput);
+export default function PersonalInfo({ currentUserInput, onInputChange }) {
+  const [userInput, setUserInput] = useState(currentUserInput);
   const [isEditing, setIsEditing] = useState(false);
 
   // Sync local state with initialUserInput when it changes
   useEffect(() => {
-    setUserInput(initialUserInput);
-  }, [initialUserInput]);
+    setUserInput(currentUserInput);
+  }, [currentUserInput]);
 
   function handleEditClick() {
     setIsEditing((editing) => !editing);

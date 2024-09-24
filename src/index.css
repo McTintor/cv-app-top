@@ -1,14 +1,13 @@
 body, html {
     margin: 0;
-    padding: 0;
+}
+
+body {
+    padding: 2.5%;
 }
 
 #root {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.input-div, .display-div {
-    width: 50%;
 }
