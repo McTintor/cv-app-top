@@ -9,7 +9,7 @@ function WorkInfo({ work, index, onInputChange, onToggleEdit, onDelete }) {
     }
   
     return (
-      <div id="work-info-wrapper">
+      <div className="wrapper">
         {work.isEditing ? (
           <>
             <input

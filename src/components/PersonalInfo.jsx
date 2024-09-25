@@ -69,7 +69,7 @@ export default function PersonalInfo({ currentUserInput, onInputChange }) {
   }
 
   return (
-    <div id="wrapper">
+    <div className="wrapper">
       {nameElement}
       {surnameElement}
       {phoneElement}

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import WorkInfo from './components/WorkInfo'
 import PersonalInfo from './components/PersonalInfo'
 import EducationInfo from './components/EducationInfo'
+import DisplayInfo from './components/DisplayInfo'
 
 const INITIAL_INPUTS = {
   personalInfo: {
@@ -13,19 +14,19 @@ const INITIAL_INPUTS = {
   },
   workInfo: [
     {
-      jobTitle: 'something',
-      companyName: 'something',
-      workDate: 'something',
-      jobDescription: 'something',
+      jobTitle: 'Junior Software Engineer',
+      companyName: 'Microsoft',
+      workDate: '2021-2023',
+      jobDescription: 'Junior front end software engineer working with React',
       isEditing: false,
     }
   ],
   educationInfo: [
     {
-      schoolName: 'something',
-      diploma: 'something',
-      studySubject: 'something',
-      schoolDate: 'something',
+      schoolName: 'Harvard University',
+      diploma: 'Bachelors degree of Engineering',
+      studySubject: 'Computer Science',
+      schoolDate: '2018-2022',
       isEditing: false,
     }
   ]
@@ -122,12 +123,15 @@ function App() {
   return (
     <>
       <div className='input-div'>
-
-      <PersonalInfo
+      <h2>Input your CV data below:</h2>
+      <div>
+        <h2>Personal Info</h2>
+        <PersonalInfo
           onInputChange={(field, newValue) => handlePersonalInfoChange('personalInfo', field, newValue)}
           currentUserInput={inputs.personalInfo}
         />
-
+      </div>
+      
       <div>
         <h2>Work Info</h2>
         {inputs.workInfo.map((work, index) => (
@@ -157,6 +161,11 @@ function App() {
       ))}
       <button onClick={handleAddEducationInfo}>Add Education Info</button>
       </div>
+
+      </div>
+
+      <div className="display-div">
+        <DisplayInfo input={inputs} />
       </div>
     </>
   );

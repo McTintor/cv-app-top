@@ -4,10 +4,11 @@ body, html {
 
 body {
     padding: 2.5%;
+    background: rgb(2,0,36);background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(130,196,233,1) 16%, rgba(9,109,121,1) 35%, rgba(5,177,181,1) 64%, rgba(2,117,202,1) 88%, rgba(0,212,255,1) 100%);
 }
 
 #root {
     display: flex;
-    align-items: center;
     justify-content: center;
+    gap: 5%;
 }

@@ -9,7 +9,7 @@ function EducationInfo({ education, index, onInputChange, onToggleEdit, onDelete
     }
   
     return (
-      <div id="education-info-wrapper">
+      <div className="wrapper">
         {education.isEditing ? (
           <>
             <input
