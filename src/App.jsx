@@ -2,6 +2,7 @@ import './App.css'
 import { useState } from 'react'
 import WorkInfo from './components/WorkInfo'
 import PersonalInfo from './components/PersonalInfo'
+import EducationInfo from './components/EducationInfo'
 
 const INITIAL_INPUTS = {
   personalInfo: {
@@ -16,6 +17,15 @@ const INITIAL_INPUTS = {
       companyName: 'something',
       workDate: 'something',
       jobDescription: 'something',
+      isEditing: false,
+    }
+  ],
+  educationInfo: [
+    {
+      schoolName: 'something',
+      diploma: 'something',
+      studySubject: 'something',
+      schoolDate: 'something',
       isEditing: false,
     }
   ]
@@ -74,16 +84,51 @@ function App() {
     setInputs({ ...inputs, workInfo: updatedWorkInfo });
   }
 
+  function handleAddEducationInfo() {
+    setInputs((prev) => ({
+      ...prev,
+      educationInfo: [
+        ...prev.educationInfo,
+        {
+          schoolName: '',
+          diploma: '',
+          studySubject: '',
+          schoolDate: '',
+          isEditing: true,
+        },
+      ],
+    }));
+  }
+
+  function handleInputChangeForEducation(index, field, newValue) {
+    const updatedEducation = inputs.educationInfo.map((edu, i) =>
+      i === index ? { ...edu, [field]: newValue } : edu
+    );
+    setInputs((prev) => ({ ...prev, educationInfo: updatedEducation }));
+  }
+
+  function handleToggleEditEducation(index) {
+    const updatedEducation = inputs.educationInfo.map((edu, i) =>
+      i === index ? { ...edu, isEditing: !edu.isEditing } : edu
+    );
+    setInputs((prev) => ({ ...prev, educationInfo: updatedEducation }));
+  }
+
+  function handleDeleteEducation(index) {
+    const updatedEducation = inputs.educationInfo.filter((_, i) => i !== index);
+    setInputs((prev) => ({ ...prev, educationInfo: updatedEducation }));
+  }
+
   return (
     <>
       <div className='input-div'>
+
       <PersonalInfo
           onInputChange={(field, newValue) => handlePersonalInfoChange('personalInfo', field, newValue)}
           currentUserInput={inputs.personalInfo}
         />
-      </div>
 
-      <div className='input-div'>
+      <div>
         <h2>Work Info</h2>
         {inputs.workInfo.map((work, index) => (
           <WorkInfo 
@@ -96,6 +141,22 @@ function App() {
           />
         ))}
         <button onClick={handleAddWorkInfo}>Add Work Info</button>
+      </div>
+
+      <div>
+      <h2>Education Info</h2>
+      {inputs.educationInfo.map((education, index) => (
+        <EducationInfo
+          key={index}
+          education={education}
+          index={index}
+          onInputChange={handleInputChangeForEducation}
+          onToggleEdit={handleToggleEditEducation}
+          onDelete={handleDeleteEducation}
+        />
+      ))}
+      <button onClick={handleAddEducationInfo}>Add Education Info</button>
+      </div>
       </div>
     </>
   );
