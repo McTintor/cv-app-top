@@ -1,8 +1,8 @@
-# React + Vite
+#CV Builder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live version here: https://mctintor-cv-app-react.netlify.app/
 
-Currently, two official plugins are available:
+##Summary
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a simple React app in which you can input your data and the app build you a resume with your data.
+This app is built as a part of The Odin Project curriculum in order to learn React basics such as props, state etc.
