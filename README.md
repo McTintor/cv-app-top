@@ -5,24 +5,24 @@ This is a simple CV Builder application built with React. It allows users to inp
 Live version here: https://mctintor-cv-app-react.netlify.app/
 
 ## Features
-Personal Info: Users can input their name, surname, phone number, and email address.
-Work Info: Add, edit, and delete multiple work experience entries. Each entry includes the job title, company name, work dates, and job description.
-Education Info: Add, edit, and delete multiple education entries. Each entry includes the school name, diploma, study subject, and school dates.
-Dynamic Editing: Work and education entries can be toggled between editing and viewing modes.
-Real-Time Display: A live preview of the CV is displayed as users input their information.
+- Personal Info: Users can input their name, surname, phone number, and email address.
+- Work Info: Add, edit, and delete multiple work experience entries. Each entry includes the job title, company name, work dates, and job description.
+- Education Info: Add, edit, and delete multiple education entries. Each entry includes the school name, diploma, study subject, and school dates.
+- Dynamic Editing: Work and education entries can be toggled between editing and viewing modes.
+- Real-Time Display: A live preview of the CV is displayed as users input their information.
 
 ### Technologies Used
-React: For creating interactive UI components.
-CSS: For basic styling and layout.
-useState Hook: To manage component states for personal, work, and education info.
+- React: For creating interactive UI components.
+- CSS: For basic styling and layout.
+- useState Hook: To manage component states for personal, work, and education info.
 
 ## Project Structure
-App.js: The main component that manages the state of the application. It handles adding, editing, and deleting work and education entries, as well as handling personal information.
-PersonalInfo.js: A component responsible for rendering and managing input fields for personal information.
-WorkInfo.js: A component responsible for rendering and managing each work experience entry.
-EducationInfo.js: A component responsible for rendering and managing each education entry.
-DisplayInfo.js: A component responsible for displaying the inputted information in a formatted CV-like view.
-App.css: Contains the basic styling for the layout and components.
+- App.js: The main component that manages the state of the application. It handles adding, editing, and deleting work and education entries, as well as handling personal information.
+- PersonalInfo.js: A component responsible for rendering and managing input fields for personal information.
+- WorkInfo.js: A component responsible for rendering and managing each work experience entry.
+- EducationInfo.js: A component responsible for rendering and managing each education entry.
+- DisplayInfo.js: A component responsible for displaying the inputted information in a formatted CV-like view.
+- App.css: Contains the basic styling for the layout and components.
 
 ## How to Run the Project
 
@@ -45,5 +45,7 @@ Live Display: The DisplayInfo component renders the formatted CV view, which upd
 ### Future Improvements
 
 Add form validation to ensure required fields are filled.
+
 Improve the styling to provide a more polished, professional CV layout.
+
 Add the ability to download the generated CV as a PDF.
