@@ -26,7 +26,7 @@ Live version here: https://mctintor-cv-app-react.netlify.app/
 
 ## How to Run the Project
 
-1. Clone this repository: git clone https://github.com/yourusername/react-cv-builder.git
+1. Clone this repository: git clone https://github.com/McTintor/react-cv-builder.git
 2. Navigate into the project directory: cd react-cv-builder
 3. Install dependencies: npm install
 4. Run the app: npm start
