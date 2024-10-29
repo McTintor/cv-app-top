@@ -5,7 +5,7 @@ This is a simple CV Builder application built with React. It allows users to inp
 Live version here: https://mctintor-cv-app-react.netlify.app/
 
 ## Features
-- Personal Info: Users can input their name, surname, phone number, and email address.
+- Personal Info: Users can input their name, last name, phone number, and email address.
 - Work Info: Add, edit, and delete multiple work experience entries. Each entry includes the job title, company name, work dates, and job description.
 - Education Info: Add, edit, and delete multiple education entries. Each entry includes the school name, diploma, study subject, and school dates.
 - Dynamic Editing: Work and education entries can be toggled between editing and viewing modes.
